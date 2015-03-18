@@ -1,0 +1,21 @@
+<html ng-app="demoApp">
+  <head>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script src ="app.js"></script>
+    <script src ="simple_controller.js"></script>
+  </head>
+<body>
+
+<div class="container" ng-controller="SimpleController">  
+  <div class="form-group" ng-repeat="choice in choices">
+    <label for="choice" ng-show="showChoiceLabel(choice)">Choices</label>
+    <button ng-show="showAddChoice(choice)" ng-click="addNewChoice()">Add another choice</button>
+    <input type="text" ng-model="choice.name" name="" placeholder="Enter a restaurant name">
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
