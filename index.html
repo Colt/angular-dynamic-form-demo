@@ -6,10 +6,10 @@
   </head>
 <body>
 
-<div class="container" ng-controller="SimpleController">  
+<div class="container" ng-controller="SimpleController">
   <div class="form-group" ng-repeat="choice in choices">
     <label for="choice" ng-show="showChoiceLabel(choice)">Choices</label>
-    <button ng-show="showAddChoice(choice)" ng-click="addNewChoice()">Add another choice</button>
+    <button ng-show="$last" ng-click="addNewChoice()">Add another choice</button>
     <input type="text" ng-model="choice.name" name="" placeholder="Enter a restaurant name">
   </div>
 </div>
